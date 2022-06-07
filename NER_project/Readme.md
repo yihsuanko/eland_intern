@@ -23,7 +23,7 @@
     ```python
         python3 app/ner_predict.py
     ```
-    -> 得到專有標籤的list
+    -> 得到標籤的list
 
 3. 使用api
 
