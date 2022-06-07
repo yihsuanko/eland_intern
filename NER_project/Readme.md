@@ -35,7 +35,7 @@
     - URL:/api/ner
         - method:post
         - Example Request Body:
-        ```python
+        ```json
             [
                 {
                     "id": 0,
