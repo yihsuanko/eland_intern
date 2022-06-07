@@ -6,6 +6,6 @@ This project records the content and experience of the internship in the RD2 of 
 
 ## NER_Project
 
-
+實習的第一個專案與專有名詞辨識，或命名實體辨識（Named Entity Recognition, NER）的工作有關，也就是透過機器學習來辨識文本裡面的詞，像是人名、地名、組織等等......
 
 ## Abstractive summary
