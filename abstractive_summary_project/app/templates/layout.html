@@ -1,0 +1,180 @@
+<html>
+    <head>
+        <title>自動產生內容</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+        <style>
+            .bodycolor{
+                background-color: #fff;
+                background-image: linear-gradient(135deg,#fff,#f5f6f7 74%);
+            }
+            .outside {
+                width: 1080px;
+                height: 550px;
+                margin: 20px 0;
+                padding: 25px;
+                padding-left: 35px;
+                padding-right: 35px;
+                background-color: white;
+                box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+            }
+            #left2{
+                width: 400px;
+                float: left;
+            }
+            #right2{
+                width: 400px;
+                float: right;
+            }
+     
+            /*Making the element inline-block*/
+            /*Assign proper font-size to the inline block element*/
+            .frame {
+                padding-left: 0.25rem;
+                padding-right: 0.25rem;
+                padding-bottom: 0.25rem;
+                padding-top: 0.25rem;
+                border-radius: 0.25rem;
+            }
+            .frame-tag {
+                padding-left: 0.125rem;
+                padding-right: 0.125rem;
+                border-radius: 0.25rem;
+            }
+            .text-pink-800 {
+                --tw-text-opacity: 1;
+                color: rgba(157,23,77,var(--tw-text-opacity));
+            }
+            .bg-pink-100 {
+                --tw-bg-opacity: 1;
+                background-color: rgba(252,231,243,var(--tw-bg-opacity));
+            }
+            .bg-pink-500 {
+                font-size: 10px;
+                font-weight: 600;    
+                --tw-bg-opacity: 1;
+                color: rgba(252,231,243,var(--tw-bg-opacity));
+                background-color: rgba(236,72,153,var(--tw-bg-opacity));
+            }
+            
+            .text-yellow-800 {
+                --tw-text-opacity: 1;
+                color: rgba(153,101,21,var(--tw-text-opacity));
+            }
+            .bg-yellow-100 {
+                --tw-bg-opacity: 1;
+                background-color: rgba(255,250,205,var(--tw-bg-opacity));
+                
+            }
+            .bg-yellow-500 {
+                font-size: 10px;
+                font-weight: 600;    
+                --tw-bg-opacity: 1;
+                color: rgba(255,250,205,var(--tw-bg-opacity));
+                background-color: rgba(255,140,0,var(--tw-bg-opacity))
+            }
+
+            .text-blue-800 {
+                --tw-text-opacity: 1;
+                color: rgba(239,246,255,0,var(--tw-text-opacity));
+            }
+            .bg-blue-100 {
+                --tw-bg-opacity: 1;
+                background-color: rgba(137, 196, 244,var(--tw-bg-opacity));
+                
+            }
+            .bg-blue-500 {
+                font-size: 10px;
+                font-weight: 600;    
+                --tw-bg-opacity: 1;
+                color: rgba(137, 196, 244,var(--tw-bg-opacity));
+                background-color: rgba(77, 5, 232,var(--tw-bg-opacity));
+            }
+
+            .text-green-800 {
+                --tw-text-opacity: 1;
+                color: rgba(17,94,89,var(--tw-text-opacity));
+            }
+            .bg-green-100 {
+                --tw-bg-opacity: 1;
+                background-color: rgba(204,251,241,var(--tw-bg-opacity)); 
+            }
+            .bg-green-500 {
+                font-size: 10px;
+                font-weight: 600;    
+                --tw-bg-opacity: 1;
+                color: rgba(204,251,241,var(--tw-text-opacity));
+                background-color: rgba(20,184,166,var(--tw-bg-opacity));
+            }
+            .mt-3{
+                margin-top: 0.75rem;
+            }
+            .text-xs{
+                font-size: .75rem;
+                line-height: 5px;
+            }
+            .text-gray-600{
+                --tw-text-opacity: 1;
+                color: rgba(75,85,99,var(--tw-text-opacity));
+            }
+            .bg-gray-100{
+                --tw-bg-opacity: 1;
+                background-color: rgba(243,244,246,var(--tw-bg-opacity));
+            } 
+            .p-2{
+                padding: 0.5rem;
+            }
+            .rounded{
+                border-radius: 0.25rem;
+            }
+            .num{
+                padding-left: 1rem;
+            }
+            .box{
+                height: 10;
+                width: 60;
+            }
+            hr.new5 {
+                border: 3px solid;
+                border-radius: 5px;
+                color: #000080;  /* fallback for old browsers */
+                box-shadow: 1px 1px 1px 0.5px rgba(0, 0, 0, 0.2);
+            }
+            .title_color{
+                font-size: 1.2em;
+                font-weight: 700;
+                color: #000080;
+                text-shadow: 1px 1px 1px #919191,
+                    1px 2px 1px #919191,
+                1px 5px 3px rgba(16,16,16,0.3),
+                1px 7px 4px rgba(16,16,16,0.1);
+            }
+            
+            pre {
+                text-align: left;
+                white-space: pre-line;
+            }
+        </style>
+
+    </head>
+    <body class="bodycolor" >
+        <br>
+        <div class="ui container">
+            <br>
+            <h1>
+                <a class="title_color" href="/">自動產生內容</a>
+            </h1>
+            <hr class="new5"/>
+            <h3 align="right">
+                <a href="/">標題</a>
+                <a href="/summary">摘要</a>
+            </h3>            
+
+            {% block content %}
+            {% endblock %}
+
+        </div>
+
+    </body>
+</html>

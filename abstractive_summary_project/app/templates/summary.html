@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+  <div class="outside">
+    <h2>自動產生摘要</h2>
+    <div id="left2">
+
+        <h3>欲分析的內文</h3>
+        <form id="getsummary" action="/summary" method="post" enctype="multipart/form-data">
+
+            <div class="field">
+                <textarea name="content" id="text_id" style="height: 300px; width: 500px;"
+                    placeholder="文章">{{ content or '' }}</textarea>
+            </div>
+        
+            <br>
+
+            <div class="json" style="display: none; width: 500px;">
+                <div class="ui toggle checkbox btn2">
+                    <input type="checkbox" name="sample" {% if sample %}checked="checked"{% endif %} >
+                    <label>使用sampling</label>
+                </div>
+
+                <div class="ui input rounded">
+                    <label class="num">產生句字的數量(1-10):</label>
+                    <input class="box" type="text" name="num_return_sequences" value="{{ num_return_sequences or '' }}">
+                </div>
+
+            </div>
+
+            <br>
+
+            <button type="submit" class="ui button primary">
+                送出
+            </button>
+
+            <button type="button" class="ui button btn1">
+                選項
+            </button>
+
+        </form>
+
+
+
+
+    </div>
+    <div id="right2">
+        <h3>自動產生摘要結果</h3>
+        <hr />
+        <br>
+        {% if content == "" %}
+
+        {% else %}
+            {% for sentence in result %}
+            <div class="ui segment">
+                <p>{{ sentence["summary_text"] }}</p>
+            </div>
+            {% endfor %}
+        {%endif%}
+        <br>
+        
+    </div>
+  </div>
+
+
+<script>
+    $(".btn1").click(function(){
+    $(".json").slideToggle();
+    });
+</script>
+
+
+{% endblock %}
